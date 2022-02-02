@@ -1,0 +1,38 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+.container{
+display: grid;
+grid-template-columns: auto;
+grid-template-rows:auto 580px auto ;
+background-color: aqua;
+
+}
+.header{
+    color: grey;
+    margin-top: 10px;
+    
+    font-size: 25px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#image1{
+    width: 220px ;
+    height: 200px;
+    border-radius: 10px;
+    
+}
+.bottom{
+   color:khaki;
+    font-size: 25px;
+    height: 80px;
+    border: 2px solid yellow;
+    background:black;
+    padding-top: 25px; ;
+    text-align: center;
+}
