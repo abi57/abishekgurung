@@ -11,7 +11,7 @@
   width: 100vw;
 }
 .header {
-  color: gray;
+  color: lightblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,7 @@
 .navhead a {
   padding-right: 80px;
   padding-left: 50px;
-  color: grey;
+  color: white;
   text-decoration: none;
 }
 
