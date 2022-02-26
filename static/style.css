@@ -3,12 +3,16 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+.body{
+  height: 100vh;
+  width: 100vw;
+} 
 .container {
-  min-height: 100vh;
+ height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0)),
     url("/static/backgroundcolor.jpg");
-  background-position: center;
+  /* background-position: center; */
   background-size: cover;
   position: relative;
 }
@@ -57,44 +61,33 @@
 }
 @media (max-width: 700px) {
   .head {
-    width: 250px;
-    height: 60px;
+    height: 80px;
   }
-  #headnav {
-    display: inline-block;
-    font-size: 7px;
-  }
-  /* .nav-links ul li ::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #36f4db;
-    display: block;
-    margin: auto;
-    transition: 0.1s;
-  }
-  .nav-links ul li :hover::after {
-    width: 100%;
-  } */
+  .nav-links ul li a {
+font-size: 10px;
 }
+}
+
 /* MAIN PART START FROM HERE */
 
 .main {
   display: flex;
-  width: 500px;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
   height: 400px;
   background-image: linear-gradient(
-    rgba(148, 209, 199, 0.5),
-    rgba(148, 209, 199, 0.2)
+    rgba(234, 245, 243, 0.7),
+    rgba(219, 240, 236, 0.5)
   );
   border-radius: 30px;
   border: 3px solid white;
   box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
+
   position: relative;
   left: 450px;
   top: 80px;
+  overflow: auto;
   box-sizing: border-box;
 }
 .main img {
@@ -124,35 +117,41 @@
   text-decoration: none;
   color: black;
 }
+@media (max-width: 1200px) {
+  .main {
+    width: 40%;
+    height: 350px;
+    left: 325px;
+    /* top: 80px; */
+  }
+} 
+@media (max-width: 1000px) {
+  .main {
+    width: 45%;
+    height: 330px;
+    left: 250px;
+    /* top: 80px; */
+  }
+} 
+@media (max-width: 800px) {
+  .main {
+    width: 50%;
+    height: 330px;
+    left: 225px;
+    /* top: 80px; */
+  }
+} 
 @media (max-width: 700px) {
   .main {
-    position: absolute;
-    height: 175px;
-    width: 200px;
-    left: 21px;
-    top: 10%;
-  }
-  .main img {
-    position: absolute;
-    height: 50%;
     width: 50%;
+    height: 290px;
+    left: 150px;
+    top: 100px;
   }
-  #mainnav {
-    position: absolute;
-    font-size: 3px;
-    /* top: 60px; */
-    margin-top: 20px;
-  }
-  #mainnav ul li a {
-    position: relative;
-    font-size: 5px;
-    color: white;
-    font-weight: bold;
-  }
-}
+} 
 
 /*  ***********CONTACT SECTION******
 .contactsection {
   width: 100%;
   height: 20%;
-} */
+}
