@@ -18,7 +18,7 @@ const showUp = () => {
   document.getElementsByTagName("li")[3].style.left = "30px";
 
   document.getElementById("two").style.left = "0px";
-  document.getElementById("one").style.left = "500px";
+  document.getElementById("one").style.left = "550px";
 };
 
 const hide = () => {
