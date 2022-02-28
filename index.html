@@ -14,16 +14,19 @@
 </head>
 <body>
     <div class="container">
-        <div class="head" onclick="touch()">
+        <div class="head">
             <nav id="headnav">
               <h1>WELCOME EVERYONE!</h1>
-            <div class="nav-links">
+              <div class="nav-links" id="navLinks">
+                         <i id="one" class="fa-solid fa-bars" onclick="showUp()"></i>
+                         <i id="two" class="fa-solid fa-xmark" onclick="hide()"></i>    
                 <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
-             </div>
+                </ul>
+              </div>
             </nav>
         </div>
         <div class="main">
