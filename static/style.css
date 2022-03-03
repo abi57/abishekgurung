@@ -30,8 +30,7 @@ body {
   width: 500px;
   font-size: 40px;
   /* border: 1px solid blue; */
-  /* font-family: "Dancing Script", cursive; */
-  font-family: "Tangerine", cursive;
+  font-family: "Tangerine";
   position: relative;
   top: -30px;
   left: 100px;
@@ -55,22 +54,36 @@ body {
     color: lightgreen;
   }
 }
-@media screen and (max-width: 376px) {
+
+/* *****WELCOME PART******* */
+
+@media screen and (max-width: 769px) {
   .content h1 {
-    left: 0;
-    top: -100px;
-    width: 130px;
-    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 426px) {
   .content h1 {
-    left: 10px;
-    top: -100px;
+    position: absolute;
+    left: 15px;
+    top: 125px;
     width: 130px;
-    font-size: 21px;
+    font-size: 20px;
   }
 }
+@media screen and (max-width: 376px) {
+  .content h1 {
+    position: absolute;
+    left: 15px;
+    top: 125px;
+    width: 130px;
+    font-size: 20px;
+  }
+}
+
 /* ****TEXT PART ***** */
 
 .text {
@@ -88,12 +101,40 @@ body {
 .text h1 a {
   text-decoration: none;
   color: white;
-  font-family: "Pacifico", cursive;
+  font-family: "Pacifico";
+}
+@media screen and (max-width: 769px) {
+  .text {
+    position: absolute;
+    left: 100px;
+    top: 170px;
+    justify-content: start;
+    width: 400px;
+  }
+  .text h1 a {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .text {
+    position: absolute;
+    left: 80px;
+    top: 180px;
+    width: 240px;
+    height: 40px;
+
+    justify-content: start;
+  }
+  .text h1 a {
+    font-size: 17px;
+  }
 }
 @media screen and (max-width: 376px) {
   .text {
-    left: 50px;
-    top: -115px;
+    position: absolute;
+    left: 80px;
+    top: 180px;
     width: 210px;
     height: 40px;
 
@@ -101,19 +142,6 @@ body {
   }
   .text h1 a {
     font-size: 15px;
-  }
-}
-@media screen and (max-width: 426px) {
-  .text {
-    left: 60px;
-    top: -113px;
-    width: 210px;
-    height: 40px;
-
-    justify-content: start;
-  }
-  .text h1 a {
-    font-size: 17px;
   }
 }
 
@@ -140,7 +168,7 @@ body {
 .menu nav ul li a {
   font-size: 20px;
   font-weight: bold;
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script";
 
   color: white;
   text-decoration: none;
@@ -158,22 +186,18 @@ body {
 .menu nav ul li :hover::after {
   width: 100%;
 }
-@media screen and (max-width: 376px) {
-  .menu {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 5px solid aquamarine;
-    border-radius: 0px 25px 0px 25px;
-    /* border-radius: 15px; */
-    /* height: auto; */
-    width: 100%;
-    padding-top: 20px;
 
+/* **** MENU ******** */
+
+@media screen and (max-width: 769px) {
+  .menu {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 235px;
+    left: 25px;
+    width: 415px;
   }
   .menu nav ul li a {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 426px) {
@@ -194,6 +218,25 @@ body {
     font-size: 18px;
   }
 }
+@media screen and (max-width: 376px) {
+  .menu {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 5px solid aquamarine;
+    border-radius: 0px 25px 0px 25px;
+    /* border-radius: 15px; */
+    /* height: auto; */
+    width: 100%;
+    padding-top: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .menu nav ul li a {
+    font-size: 16px;
+  }
+}
+
 /* *****IMAGE PART************ */
 .imagepart {
   width: 260px;
@@ -211,19 +254,30 @@ body {
 .imagepart img:hover {
   border: 3px solid yellow;
 }
-@media screen and (max-width: 376px) {
+
+/* ****  IMAGE PART ****** */
+@media screen and (max-width: 769px) {
   .imagepart {
-    width: 200px;
-    height: 200px;
-    left: 80px;
-    top: 235px;
+    width: 237px;
+    height: 245px;
+    left: 450px;
+    top: 169px;
   }
 }
+
 @media screen and (max-width: 426px) {
   .imagepart {
     width: 210px;
     height: 205px;
     left: 105px;
+    top: 235px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .imagepart {
+    width: 200px;
+    height: 200px;
+    left: 80px;
     top: 235px;
   }
 }
