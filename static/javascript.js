@@ -1,37 +1,58 @@
-// let count = document.getElementById("displayscreen");
-// let btnInc = document.getElementById("btnInc");
-// let btnDec = document.getElementById("btnDec");
-// btnInc.addEventListener("click", () => {
-//   count.value = parseInt(count.value) + 1;
-// });
-// btnDec.addEventListener("click", () => {
-//   count.value = parseInt(count.value) - 1;
-// });
-//   <input type="text" value="0" id="displayscreen">
-//             <button id="btnInc" >Increment</button>
-//             <button id="btnDec" >Decrement</button>
-
-const showUp = () => {
-  document.getElementsByTagName("li")[0].style.left = "-7px";
-  document.getElementsByTagName("li")[1].style.left = "-7px";
-  document.getElementsByTagName("li")[2].style.left = "-7px";
-  document.getElementsByTagName("li")[3].style.left = "-7px";
-
-  document.getElementById("two").style.left = "0px";
-  document.getElementById("one").style.left = "550px";
+var TxtType = function (el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = "";
+  this.tick();
+  this.isDeleting = false;
 };
 
-const hide = () => {
-  document.getElementsByTagName("li")[0].style.left = "200px";
-  document.getElementsByTagName("li")[1].style.left = "200px";
-  document.getElementsByTagName("li")[2].style.left = "200px";
-  document.getElementsByTagName("li")[3].style.left = "200px";
-  document.getElementById("two").style.left = "100px";
-  document.getElementById("one").style.left = "0px";
+TxtType.prototype.tick = function () {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+  var that = this;
+  var delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) {
+    delta /= 2;
+  }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function () {
+    that.tick();
+  }, delta);
 };
 
-if (hide) {
-  document.getElementById("one").style.zIndex = "1";
-} else {
-  document.getElementById("one").style.zIndex = "1";
-}
+window.onload = function () {
+  var elements = document.getElementsByClassName("typewrite");
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute("data-type");
+    var period = elements[i].getAttribute("data-period");
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+  document.body.appendChild(css);
+};
