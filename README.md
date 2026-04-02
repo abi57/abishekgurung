@@ -4,6 +4,6 @@
 - 🤝 Open to collaborating with creative developers, motivated builders, and entrepreneurs  
 - 🚀 Interested in productivity, product development, and innovative ideas  
 
-➡️ How to reach me: https://abishekgurung.com.np/  
+➡️ How to reach me: https://abishekgurung.com.np/  (needs update)
 
-Fun fact: I’m half Finnish 🇫🇮 — so I bring a mix of cultures and perspectives!
+
