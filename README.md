@@ -6,6 +6,4 @@
 
 ➡️ How to reach me: https://abishekgurung.com.np/  
 
-Pronouns: He/Him  
-
 Fun fact: I’m half Finnish 🇫🇮 — so I bring a mix of cultures and perspectives!
